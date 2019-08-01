@@ -1,0 +1,4 @@
+vhdtdtfi -prj ProjectArch -o C:/Xilinx/ProjectArch/Mux16x5.vhi -module Mux16x5 -template C:/Xilinx/13.4/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work ROBArrays.vhd -lib work Mux12x5.vhd 
+vhdtdtfi -lib work ROBArrays.vhd -lib work Mux12x5.vhd -prj ProjectArch -o Mux16x5.spl -module Mux16x5 -template C:/Xilinx/13.4/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e Mux16x5.spl C:/Xilinx/ProjectArch/Mux16x5.sym 
+vhdtdtfi -prj ProjectArch -o C:/Xilinx/ProjectArch/Mux16x5.vhi -module Mux16x5 -template C:/Xilinx/13.4/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work ROBArrays.vhd -lib work Mux12x5.vhd 

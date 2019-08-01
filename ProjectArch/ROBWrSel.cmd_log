@@ -1,0 +1,1 @@
+vhdtdtfi -prj ProjectArch -o C:/Xilinx/ProjectArch/ROBWrSel.vhi -module ROBWrSel -template C:/Xilinx/13.4/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work ROBWrSel.vhd 
