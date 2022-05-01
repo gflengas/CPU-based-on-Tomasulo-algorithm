@@ -1,5 +1,5 @@
 # CPU-based-on-Tomasulo-algorithm
-Project developed for Advanced Computer Architecture course. We were tasked to create a implement a processor with dynamic pipeline based on the Tomasulo algorithm using VHDL.
+Project developed for Advanced Computer Architecture course. We were tasked to create a implement a processor with dynamic pipeline based on the Tomasulo algorithm using VHDL. On the following section a fast description is presented. For more detailed describtion of the proces 
 ## Baseline interface
 - **Reservation Station(RS):** It consists of registers, which store data when they are not busy when sending an order to them or via the CDB. An RS is considered busy when it contains a command and has not yet received the signal executed by
 the corresponding Functional Unit. It is also considered Ready to be executed when it is busy and the values of Qj, Qk are zero.
@@ -20,3 +20,6 @@ The above diagram is the implementation of a unit of logic operations. The blue 
 
 In its entirety, the Reorder Buffer is as follows:
 ![explanation image2](https://github.com/gflengas/CPU-based-on-Tomasulo-algorithm/blob/master/pictures/2.png)
+
+## Top module
+![explanation image3](https://github.com/gflengas/CPU-based-on-Tomasulo-algorithm/blob/master/pictures/3.png)
