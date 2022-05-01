@@ -12,8 +12,8 @@ the corresponding Functional Unit. It is also considered Ready to be executed wh
 
 The above diagram is the implementation of a unit of logic operations. The blue lines represent the control signals from the control. The arithmetic unit is implemented similarly by adding one more Reservation Station and replacing the LFU with an AFU.
 
-- Register File
+- **Register File:** It consists of 32, 32 bit registers for the data and 32 registers for tags. It has two reading inputs from where they are received and the data but also the tag of the data requested by the given ones addresses. The Register File writes the tags through the Issue unit and the same time, saves the CDB.V data when a tag is found inside it is equal to the input CDB.Q.
 
-- Common Data Bus
+- **Common Data Bus:** The CDB accepts the Requests and decides who will write in its entries according to the round robin technique by sending to the corresponding module the suitable Grant.
 
-- 
+
