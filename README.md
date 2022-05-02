@@ -24,3 +24,25 @@ In its entirety, the Reorder Buffer is as follows:
 
 ## Top module
 ![explanation image3](https://github.com/gflengas/CPU-based-on-Tomasulo-algorithm/blob/master/pictures/3.png)
+
+To combine the initial modules on the final top module, some modifications had to be made:
+- Simplify the Register File, it now simply saves the values when it receives WE.
+The registers of the Tags were removed, as well as the control that was done through them and
+of the CDBQ.
+- Add a simple exception handling function, activated by a signal Exception, which essentially implemented within the ROB.
+- Add some changes to the way CDB and IssueUnit work so the system can support Buffer usage.
+- Change the logic with which we load values in RF, to take advantage of the new IssueUnit and CDB functions.
+
+RoB connects to the Issue Unit to receive commands, the CDB for data inputing , and the Register File for exporting the final results. Furthermore thanks to the use of multiplexers, we select the data to be passed to RS.
+
+## TestBench: 
+```
+ld $1,1
+ld $2,5
+add $3, $1, $2
+or $4,$3,$1
+not $5,$4
+and $6,$2,$1
+sub $7,$5,$6
+```
+![explanation image4](https://github.com/gflengas/CPU-based-on-Tomasulo-algorithm/blob/master/pictures/4.png)
